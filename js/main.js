@@ -174,46 +174,57 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
-    
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
-            // 폼 데이터 수집
-            const formData = {
-                companyName: document.getElementById('companyName').value,
-                name: document.getElementById('name').value,
-                position: document.getElementById('position').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                serviceType: document.getElementById('serviceType').value,
-                message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
-            };
-            
-            // 콘솔에 데이터 출력 (실제로는 서버로 전송)
-            console.log('문의 폼 데이터:', formData);
-            
-            // 로컬 스토리지에 저장 (데모용)
-            const inquiries = JSON.parse(localStorage.getItem('happypath_inquiries') || '[]');
-            inquiries.push(formData);
-            localStorage.setItem('happypath_inquiries', JSON.stringify(inquiries));
-            
-            // 폼 숨기고 성공 메시지 표시
-            contactForm.style.display = 'none';
-            formSuccess.style.display = 'block';
-            
-            // 3초 후 폼 초기화 및 다시 표시
-            setTimeout(() => {
-                contactForm.reset();
-                contactForm.style.display = 'flex';
-                formSuccess.style.display = 'none';
-                
-                // 성공 메시지 표시
-                alert('문의가 성공적으로 전송되었습니다! 빠른 시일 내에 담당자가 연락드리겠습니다.');
-            }, 3000);
+
+            // 제출 버튼 로딩 처리
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) {
+                submitBtn.textContent = '전송 중...';
+                submitBtn.disabled = true;
+            }
+
+            try {
+                const response = await fetch('https://formspree.io/f/xzdakdev', {
+                    method: 'POST',
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    // 성공 시 기존 UI 그대로 활용
+                    contactForm.style.display = 'none';
+                    formSuccess.style.display = 'block';
+
+                    // 3초 후 폼 초기화
+                    setTimeout(() => {
+                        contactForm.reset();
+                        contactForm.style.display = 'flex';
+                        formSuccess.style.display = 'none';
+                        if (submitBtn) {
+                            submitBtn.textContent = originalBtnText;
+                            submitBtn.disabled = false;
+                        }
+                    }, 3000);
+
+                } else {
+                    throw new Error('서버 오류');
+                }
+
+            } catch (error) {
+                // 실패 시 버튼 복구 + 안내
+                if (submitBtn) {
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                }
+                alert('전송 중 오류가 발생했습니다.\n잠시 후 다시 시도해 주세요.');
+            }
         });
     }
+
     
     // ============================================
     // 폼 입력 유효성 검사
