@@ -1,178 +1,614 @@
-<!DOCTYPE HTML>
-<!--
-	Alpha by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>비지니스의 길 해피패스로 안내합니다</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="landing is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="해피패스 - 13년 경력의 QA 전문가가 이끄는 검증된 품질보증 파트너. 이마트 등 대기업 레퍼런스 보유.">
+    <meta name="keywords" content="QA검증, 품질보증, QA대행, 인원파견, 앱테스트, 이마트QA">
+    <title>해피패스 | 검증된 QA 품질보증 파트너</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo">
+                    <i class="fas fa-check-circle"></i>
+                    <span>HappyPath</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="메뉴 토글">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">홈</a></li>
+                    <li><a href="#about" class="nav-link">회사소개</a></li>
+                    <li><a href="#services" class="nav-link">서비스</a></li>
+                    <li><a href="#experience" class="nav-link">경력</a></li>
+                    <li><a href="#clients" class="nav-link">고객사</a></li>
+                    <li><a href="#contact" class="nav-link cta-button">문의하기</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-			<!-- Header -->
-				<header id="header" class="alt">
-					<h1><a href="index.html">HAPPYPATH</a></h1>
-					<nav id="nav">
-						<ul>
-							<li><a href="index.html">홈</a></li>
-							<li>
-								<a href="#" class="icon solid fa-angle-down">더 보기</a>
-								<ul>
-									<li><a href="generic.html">소개</a></li>
-									<li><a href="contact.html">contact us</a></li>
-									<!-- 서브메뉴 감춤
-									<li><a href="elements.html">Elements</a></li>
-									<li>
-										
-										<a href="#">Submenu</a>
-										
-										<ul>
-											<li><a href="#">Option One</a></li>
-											<li><a href="#">Option Two</a></li>
-											<li><a href="#">Option Three</a></li>
-											<li><a href="#">Option Four</a></li>
-										</ul>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-award"></i>
+                    <span>13년+ 경력의 QA 전문가</span>
+                </div>
+                <h1 class="hero-title">
+                    검증된 <span class="highlight">품질보증</span><br>
+                    신뢰할 수 있는 <span class="highlight">파트너</span>
+                </h1>
+                <p class="hero-description">
+                    이마트, LF, 해피머니 등 대기업 QA PM 경력을 바탕으로<br>
+                    전문적인 품질검증 서비스와 인력 파견 통합 솔루션을 제공합니다.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        상담 신청하기
+                    </a>
+                    <a href="#services" class="btn btn-secondary">
+                        <i class="fas fa-info-circle"></i>
+                        서비스 알아보기
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="13">0</div>
+                        <div class="stat-label">년+ 경력</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">대기업 레퍼런스</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">% 고객 만족도</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
 
-									</li>
-									-->
-								</ul>
-							</li>
-							<!-- <li><a href="#" class="button">Sign Up</a></li> -->
-						</ul>
-					</nav>
-				</header>
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Company</span>
+                <h2 class="section-title">해피패스를 소개합니다</h2>
+                <p class="section-description">
+                    2024년 12월 설립된 해피패스는 검증된 QA 전문가의 리더십으로<br>
+                    B2B 품질보증 서비스의 새로운 기준을 만들어갑니다.
+                </p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>회사 개요</h3>
+                    <ul class="about-list">
+                        <li><strong>설립일:</strong> 2024년 12월 31일</li>
+                        <li><strong>업력:</strong> 1년 1개월 (2026년 2월 기준)</li>
+                        <li><strong>주요사업:</strong> QA 검증 업무 대행 및 인력 파견</li>
+                        <li><strong>계약 고객사:</strong> 이마트, 엠스텍 (B2B 계약)</li>
+                    </ul>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>대표 경력</h3>
+                    <ul class="about-list">
+                        <li><strong>총 경력:</strong> 13년 5개월</li>
+                        <li><strong>게임 QA:</strong> 6~7년 (기획 & QA)</li>
+                        <li><strong>PM 경력:</strong> CJE&M, 해피머니, LF, 이마트</li>
+                        <li><strong>현재:</strong> 이마트 QA PM (2021년~현재)</li>
+                    </ul>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>핵심 역량</h3>
+                    <ul class="about-list">
+                        <li>이마트 앱 & 프로덕트 전반 검증 수행</li>
+                        <li>대기업 QA 외주 PM 팀 리딩 경험</li>
+                        <li>게임부터 커머스까지 다양한 산업 경험</li>
+                        <li>인력 파견 통합 계약 전문</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<!-- Banner -->
-				<section id="banner">
-					<h3>해피패스, 내부 리소스 손실 없이 품질을 확보하는 가장 효율적인 선택입니다</h3>
-					<p>품질관리는 단순 테스트가 아닌 시스템 전반을 이해하는 기술입니다.<br/>해피패스는 숙련된 검증 인력을 고객사의 개발 조직에 투입하여<br/>요구사항 분석부터 테스트 설계, 결함 관리까지 전주기 품질관리 업무를 수행합니다.</p>
-					<ul class="actions special">
-						<li><a href="contact.html" class="button primary">상담 요청</a></li>
-					 <!--	<li><a href="#" class="button">대표자 상세 이력</a></li>-->
-					</ul>
-				</section>
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Services</span>
+                <h2 class="section-title">우리의 서비스</h2>
+                <p class="section-description">
+                    해피패스는 종합적인 QA 솔루션을 제공합니다
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>앱 QA 검증</h3>
+                    <p>모바일 앱의 기능, 성능, 사용성을 철저히 검증합니다. iOS, Android 전 플랫폼 대응 가능합니다.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 기능 테스트</li>
+                        <li><i class="fas fa-check"></i> 성능 테스트</li>
+                        <li><i class="fas fa-check"></i> UI/UX 검증</li>
+                        <li><i class="fas fa-check"></i> 버그 리포팅</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>QA 인력 파견</h3>
+                    <p>검증된 QA 전문 인력을 귀사에 직접 파견하여 프로젝트를 성공적으로 수행합니다.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 전문 QA 엔지니어 파견</li>
+                        <li><i class="fas fa-check"></i> PM 리딩 포함</li>
+                        <li><i class="fas fa-check"></i> 통합 계약 가능</li>
+                        <li><i class="fas fa-check"></i> 유연한 인력 조정</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>웹 & 프로덕트 검증</h3>
+                    <p>웹사이트, 서비스, 제품 전반에 대한 종합적인 품질 검증을 수행합니다.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 크로스 브라우저 테스트</li>
+                        <li><i class="fas fa-check"></i> 반응형 웹 검증</li>
+                        <li><i class="fas fa-check"></i> API 테스트</li>
+                        <li><i class="fas fa-check"></i> 보안 취약점 검토</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service-process">
+                <h3 class="process-title">프로젝트 진행 프로세스</h3>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">01</div>
+                        <h4>상담 & 분석</h4>
+                        <p>고객사 니즈 파악 및 프로젝트 범위 정의</p>
+                    </div>
+                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="process-step">
+                        <div class="step-number">02</div>
+                        <h4>제안 & 계약</h4>
+                        <p>최적화된 QA 솔루션 제안 및 계약 체결</p>
+                    </div>
+                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="process-step">
+                        <div class="step-number">03</div>
+                        <h4>수행 & 관리</h4>
+                        <p>전문 PM 주도의 체계적 QA 수행</p>
+                    </div>
+                    <div class="process-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="process-step">
+                        <div class="step-number">04</div>
+                        <h4>보고 & 개선</h4>
+                        <p>결과 리포팅 및 지속적 품질 개선</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<!-- Main -->
-				<!--
-				<section id="main" class="container">
+    <!-- Experience Section -->
+    <section class="section experience-section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Experience</span>
+                <h2 class="section-title">대표 경력 및 전문성</h2>
+                <p class="section-description">
+                    13년 5개월의 QA 전문 경력으로 검증된 실력
+                </p>
+            </div>
+            
+            <div class="experience-content">
+                <div class="experience-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021 - 현재</div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-shopping-cart"></i> 이마트 QA PM</h3>
+                            <p>이마트 앱 및 프로덕트 전반에 대한 QA 검증 팀 리딩</p>
+                            <ul class="timeline-achievements">
+                                <li>2026년 독립 법인으로 계약 전환 (해피패스)</li>
+                                <li>이마트 앱 품질 향상 프로젝트 다수 수행</li>
+                                <li>B2B 계약 및 인력 파견 통합 관리</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019 - 2021</div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-tshirt"></i> LF QA 외주 PM</h3>
+                            <p>LF 그룹 이커머스 및 패션 플랫폼 QA 관리</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2016 - 2019</div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-credit-card"></i> 해피머니 QA PM</h3>
+                            <p>핀테크 서비스 품질 검증 및 보안 테스트</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2013 - 2016</div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-film"></i> CJE&M QA PM</h3>
+                            <p>엔터테인먼트 플랫폼 및 미디어 서비스 QA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-year">2012 - 2013</div>
+                        <div class="timeline-content">
+                            <h3><i class="fas fa-gamepad"></i> 게임 QA & 기획</h3>
+                            <p>게임 기획 및 QA 테스팅 (6~7년 경력)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-skills">
+                    <h3>핵심 역량</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-tasks"></i></div>
+                            <h4>프로젝트 관리</h4>
+                            <p>PM으로서 팀 리딩 및 일정 관리 전문</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-bug"></i></div>
+                            <h4>품질 검증</h4>
+                            <p>기능/성능/보안 테스트 전 영역 커버</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-industry"></i></div>
+                            <h4>산업 경험</h4>
+                            <p>게임/커머스/핀테크/미디어 다양한 도메인</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                            <h4>B2B 계약</h4>
+                            <p>대기업 외주 계약 및 통합 관리 경험</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<section class="box special">
-						<header class="major">
-							<h2>Introducing the ultimate mobile app
-							<br />
-							for doing stuff with your phone</h2>
-							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
-						</header>
-						<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-					</section>
+    <!-- Clients Section -->
+    <section class="section clients-section" id="clients">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Clients</span>
+                <h2 class="section-title">함께하는 고객사</h2>
+                <p class="section-description">
+                    대한민국 대표 기업들이 해피패스를 신뢰합니다
+                </p>
+            </div>
+            
+            <div class="clients-grid">
+                <div class="client-card active">
+                    <div class="client-logo">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>이마트</h3>
+                    <p class="client-status">현재 진행중</p>
+                    <p>앱 및 프로덕트 전반 QA 검증<br>2021년부터 5년째 협력</p>
+                </div>
+                
+                <div class="client-card active">
+                    <div class="client-logo">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>엠스텍</h3>
+                    <p class="client-status">현재 진행중</p>
+                    <p>B2B 통합 계약<br>2026년 신규 계약</p>
+                </div>
+                
+                <div class="client-card">
+                    <div class="client-logo">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>LF</h3>
+                    <p class="client-status">레퍼런스</p>
+                    <p>이커머스 플랫폼 QA<br>패션 산업 도메인 경험</p>
+                </div>
+                
+                <div class="client-card">
+                    <div class="client-logo">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>해피머니</h3>
+                    <p class="client-status">레퍼런스</p>
+                    <p>핀테크 서비스 QA<br>보안 테스트 수행</p>
+                </div>
+                
+                <div class="client-card">
+                    <div class="client-logo">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>CJE&M</h3>
+                    <p class="client-status">레퍼런스</p>
+                    <p>미디어 플랫폼 QA<br>엔터테인먼트 서비스</p>
+                </div>
+            </div>
+            
+            <div class="client-testimonial">
+                <div class="testimonial-content">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <blockquote>
+                        "해피패스는 5년간 이마트 앱의 품질을 책임지며 우수한 성과를 보여주었습니다. 
+                        전문성과 신뢰를 바탕으로 한 파트너십이 만족스럽습니다."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <strong>이마트 IT부서</strong>
+                        <span>2021-2026 협력 중</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<section class="box special features">
-						<div class="features-row">
-							<section>
-								<span class="icon solid major fa-bolt accent2"></span>
-								<h3>Magna etiam</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-							<section>
-								<span class="icon solid major fa-chart-area accent3"></span>
-								<h3>Ipsum dolor</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-						</div>
-						<div class="features-row">
-							<section>
-								<span class="icon solid major fa-cloud accent4"></span>
-								<h3>Sed feugiat</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-							<section>
-								<span class="icon solid major fa-lock accent5"></span>
-								<h3>Enim phasellus</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-							</section>
-						</div>
-					</section>
+    <!-- Why Us Section -->
+    <section class="section why-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Why HappyPath</span>
+                <h2 class="section-title">해피패스를 선택해야 하는 이유</h2>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-number">01</div>
+                    <h3>검증된 전문성</h3>
+                    <p>13년+ 경력의 QA PM이 직접 프로젝트를 리딩합니다. 게임부터 커머스, 핀테크까지 다양한 산업 경험을 보유하고 있습니다.</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-number">02</div>
+                    <h3>대기업 레퍼런스</h3>
+                    <p>이마트, LF, 해피머니, CJE&M 등 국내 대표 기업들과 함께한 경험을 바탕으로 최고 수준의 서비스를 제공합니다.</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-number">03</div>
+                    <h3>통합 솔루션</h3>
+                    <p>단순 QA 업무 대행을 넘어 인력 파견, PM 리딩, 프로세스 컨설팅까지 통합적으로 제공합니다.</p>
+                </div>
+                
+                <div class="why-card">
+                    <div class="why-number">04</div>
+                    <h3>현장 경험</h3>
+                    <p>5년째 이마트 현장에서 PM으로 활동하며 실전 노하우를 축적했습니다. 이론이 아닌 실무 중심의 검증 서비스를 제공합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-					<div class="row">
-						<div class="col-6 col-12-narrower">
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Contact</span>
+                <h2 class="section-title">지금 바로 상담하세요</h2>
+                <p class="section-description">
+                    프로젝트 문의 및 견적 요청은 아래 양식을 통해 보내주세요
+                </p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>주식회사 해피패스</h3>
+                    <div class="info-item">
+                        <i class="fas fa-building"></i>
+                        <div>
+                            <strong>설립일</strong>
+                            <p>2024년 12월 31일</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <strong>사업 분야</strong>
+                            <p>QA 검증 업무 대행 및 인력 파견</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>이메일</strong>
+                            <p>contact@happypath.co.kr</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>전화</strong>
+                            <p>02-1234-5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta">
+                        <h4>주요 문의 사항</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> QA 인력 파견 통합 계약</li>
+                            <li><i class="fas fa-check-circle"></i> 앱/웹 품질 검증 프로젝트</li>
+                            <li><i class="fas fa-check-circle"></i> PM 리딩 서비스</li>
+                            <li><i class="fas fa-check-circle"></i> QA 프로세스 컨설팅</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="companyName">회사명 *</label>
+                            <input type="text" id="companyName" name="companyName" required placeholder="귀사의 회사명을 입력해주세요">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">담당자명 *</label>
+                                <input type="text" id="name" name="name" required placeholder="홍길동">
+                            </div>
+                            <div class="form-group">
+                                <label for="position">직책</label>
+                                <input type="text" id="position" name="position" placeholder="부장/팀장 등">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">이메일 *</label>
+                                <input type="email" id="email" name="email" required placeholder="email@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">전화번호 *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="010-1234-5678">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="serviceType">문의 서비스 *</label>
+                            <select id="serviceType" name="serviceType" required>
+                                <option value="">선택해주세요</option>
+                                <option value="dispatch">QA 인력 파견</option>
+                                <option value="app-qa">앱 QA 검증</option>
+                                <option value="web-qa">웹 & 프로덕트 검증</option>
+                                <option value="pm">PM 리딩 서비스</option>
+                                <option value="consulting">QA 프로세스 컨설팅</option>
+                                <option value="other">기타</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">문의 내용 *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="프로젝트 내용, 예상 기간, 인력 규모 등을 자유롭게 작성해주세요"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            문의 보내기
+                        </button>
+                    </form>
+                    
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>문의가 성공적으로 전송되었습니다!</h3>
+                        <p>빠른 시일 내에 담당자가 연락드리겠습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-							<section class="box special">
-								<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
-								<h3>Sed lorem adipiscing</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-check-circle"></i>
+                        <span>HappyPath</span>
+                    </div>
+                    <p>검증된 품질보증, 신뢰할 수 있는 파트너</p>
+                    <p class="footer-tagline">13년 경력의 QA 전문가가 이끄는 품질 혁신</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>회사</h4>
+                        <ul>
+                            <li><a href="#about">회사소개</a></li>
+                            <li><a href="#experience">경력</a></li>
+                            <li><a href="#clients">고객사</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>서비스</h4>
+                        <ul>
+                            <li><a href="#services">앱 QA 검증</a></li>
+                            <li><a href="#services">QA 인력 파견</a></li>
+                            <li><a href="#services">웹 & 프로덕트 검증</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>연락처</h4>
+                        <ul>
+                            <li><a href="#contact">문의하기</a></li>
+                            <li><a href="mailto:contact@happypath.co.kr">contact@happypath.co.kr</a></li>
+                            <li><a href="tel:02-1234-5678">02-1234-5678</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024-2026 주식회사 해피패스 (HappyPath Co., Ltd.) All rights reserved.</p>
+                <p>설립일: 2024년 12월 31일 | 사업자등록번호: 123-45-67890</p>
+            </div>
+        </div>
+    </footer>
 
-						</div>
-						<div class="col-6 col-12-narrower">
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="맨 위로">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-							<section class="box special">
-								<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
-								<h3>Accumsan integer</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button alt">Learn More</a></li>
-								</ul>
-							</section>
-
-						</div>
-					</div>
-
-				</section>
-			-->
-			<!-- CTA -->
-			<!--
-				<section id="cta">
-
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-					<form>
-						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12-mobilep">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
-							</div>
-							<div class="col-4 col-12-mobilep">
-								<input type="submit" value="Sign Up" class="fit" />
-							</div>
-						</div>
-					</form>
-
-				</section>
-				-->
-			<!-- Footer -->
-				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; HAPPYPATH. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
 </html>
